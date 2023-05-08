@@ -1,0 +1,100 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        padding:0px;
+        margin:0px;
+    }
+    body{
+        background-color: black;
+    }
+
+    nav{
+      height:100vh;
+      width:70vw;
+      min-width:600px;
+      display:flex;
+      align-items:center;
+      justify-content: space-around;
+      margin:auto;     
+    }
+    link{
+        position:absolute;
+        left:200px;
+        top:20px;
+        padding:20px;
+    }
+    .link a{
+        display:inline-block;
+        width:100px;
+        padding:10px;
+        color:white;
+        text-align: center;
+        text-decoration:none;
+        font-family:Arial, Helvetica, sans-serif;
+        font-weight: bold;
+    }
+
+
+    a:after{
+        content:"";
+        position:absolute; 
+        width:8px;        
+        height:8px;
+        bottom:-10px;
+        left:50%;
+        margin-left: -2px;
+        border-radius:10px;
+        transition:0.3s;
+    }
+    .pointer{
+        width:8px;
+        height:8px;
+        border-radius:50%;
+        background-color: darkgoldenrod;
+        transform:translateX(50px);
+
+    }
+
+    .link a:hover{
+        color:darkgoldenrod;
+        transition:color 0.3s;
+    }
+
+    .link a:nth-child(2):hover ~ .pointer{
+        transform:translateX(50px);
+    }
+    .link a:nth-child(3):hover ~ .pointer{
+        transform:translateX(180px);
+    }
+    .link a:nth-child(4):hover ~ .pointer{
+        transform:translateX(305px);
+    }
+    .link a:nth-child(5):hover ~ .pointer{
+        transform:translateX(430px);
+    }
+
+
+
+</style>
+<body>
+    <nav>
+        <div class="link">
+            <div class="nav"></div>
+        <a href="https://about.google/">GOOGLE</a>
+        <a  href="https://www.microsoft.com/en-in">MICROSOFT</a>
+        <a  href="https://www.tcs.com/">TCS</a>
+        <a  href="https://careerx.club/">CAREERX</a>
+        <div class="pointer"></div>
+        </div>
+        </div>
+    </nav>
+</body>
+</html>
+
